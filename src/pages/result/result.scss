@@ -1,0 +1,52 @@
+page-result {
+  ion-item{
+    background: transparent !important;
+
+  }
+  ion-label{
+    white-space: normal !important;
+  }
+
+  .isVegan{
+    background: linear-gradient(to bottom, #009900, transparent);
+    border-radius: 49px 136px 135px 163px;
+    padding: 20px;
+    h1{
+      color:black;
+    }
+  }
+
+  .notVegan{
+    background: linear-gradient(to bottom, #D14517, transparent);
+    padding: 20px;
+    border-radius: 49px 136px 135px 163px;
+    h1{
+      color:black;
+    }
+  }
+
+  .vegetarian{
+    background: linear-gradient(to bottom, #FFFF00, transparent);
+    border-radius: 49px 136px 135px 163px;
+    padding: 20px;
+    h1{
+      color:black;
+    }
+  }
+
+  .noproduct{
+    background: linear-gradient(to bottom, #9999FF, transparent);
+    border-radius: 49px 136px 135px 163px;
+    padding: 20px;
+    h1{
+      padding-top: 50px;
+      text-align: center;
+      color:black;
+    }
+    height: 250px;
+  }
+
+  .result{
+        padding-top: 35px;
+  }
+}

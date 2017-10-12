@@ -1,0 +1,24 @@
+<ion-header>
+    <img src="assets/img/Logoname.png">
+</ion-header>
+
+<ion-content padding>
+  <div class="bckbtn">
+    <ion-icon (click)="gohome()" name="arrow-dropleft-circle"></ion-icon>
+  </div>
+  <ion-item id="inputlabel">
+      <ion-label floating>Type Barcode</ion-label>
+      <ion-input [(ngModel)]="keyword"></ion-input>
+  </ion-item>
+  <button class="btn" ion-button round (click)="search()">Search Barcode</button>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <h3 item-left>©2017 VeggieScan</h3>
+  <ion-icon (click)="openhistory()" name="archive" item-right></ion-icon>
+  <ion-icon (click)="openinfo()" name="information-circle" item-right></ion-icon>
+</ion-item>
+</ion-footer>

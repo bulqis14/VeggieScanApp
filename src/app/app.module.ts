@@ -3,9 +3,25 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Network } from '@ionic-native/network';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
+import { HttpModule } from '@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyC4hYa_3ApmsQyacvj45G0HGMj010ExOzQ",
+    authDomain: "veggiescan.firebaseapp.com",
+    databaseURL: "https://veggiescan.firebaseio.com",
+    projectId: "veggiescan",
+    storageBucket: "veggiescan.appspot.com",
+    messagingSenderId: "768992314848"
+  };
 
 @NgModule({
   declarations: [
@@ -14,6 +30,9 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -23,8 +42,11 @@ import { HomePage } from '../pages/home/home';
   ],
   providers: [
     StatusBar,
+    FirebaseServiceProvider,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    BarcodeScanner,
+    Network,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

@@ -1,14 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <img src="assets/img/Logoname.png">
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="scanbarcode">
+    <ion-item>
+      <img src="assets/img/barcode.png" (click)="openscan()" name="barcode">
+      <h3>Scan Barcode</h3>
+    </ion-item>
+  </div>
+
+  <div class="typebarcode">
+    <ion-item no-lines>
+      <img src="assets/img/keyboard1600.png" (click)="openkeypad()" name="keypad">
+      <h3>Type Barcode</h3>
+    </ion-item>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-item>
+    <h3 item-left>©2017 VeggieScan</h3>
+    <ion-icon name="archive" (click)="openhistory()" item-right></ion-icon>
+    <ion-icon (click)="openinfo()" name="information-circle" item-right></ion-icon>
+  </ion-item>
+</ion-footer>

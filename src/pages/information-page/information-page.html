@@ -1,0 +1,56 @@
+<ion-header>
+    <img src="assets/img/Logoname.png">
+</ion-header>
+
+
+<ion-content padding>
+  <div class="bckbtn">
+    <ion-icon (click)="gohome()" name="arrow-dropleft-circle"></ion-icon>
+  </div>
+
+
+<div class="infdata">
+  <h2>Colour Indicator</h2>
+  <ion-row>
+    <ion-col col-3>
+      <ion-icon class="row1" name="ios-leaf"></ion-icon>
+    </ion-col>
+    <ion-col col-7>
+      <h3>Suitable for vegetarian and vegan</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3>
+      <ion-icon class="row2" name="ios-leaf"></ion-icon>
+    </ion-col>
+    <ion-col col-7>
+      <h3>Suitable for vegetarian only</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3>
+      <ion-icon class="row3" name="ios-leaf"></ion-icon>
+    </ion-col>
+    <ion-col col-7>
+      <h3>Not suitable for vegetarian and vegan</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3>
+      <ion-icon class="row4" name="ios-leaf"></ion-icon>
+    </ion-col>
+    <ion-col col-7>
+      <h3>The product is not yet in the database</h3>
+    </ion-col>
+  </ion-row>
+</div>
+
+</ion-content>
+
+<ion-footer id="info">
+  <ion-item>
+  <h3 item-left>©2017 VeggieScan</h3>
+  <ion-icon class="historybtn2" (click)="openhistory()" name="archive" item-right></ion-icon>
+  <ion-icon class="infobtn2" name="information-circle" item-right></ion-icon>
+</ion-item>
+</ion-footer>
