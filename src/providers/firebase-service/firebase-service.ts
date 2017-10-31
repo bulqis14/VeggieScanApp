@@ -8,9 +8,6 @@ export class FirebaseServiceProvider {
 
   constructor(public afd: AngularFireDatabase) {
 }
-    // getProduct() {
-    //   return this.afd.list('/Productlist/');
-    // }
 
     getProductId(id){
       return this.afd.list('/Productlist', {

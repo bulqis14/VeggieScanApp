@@ -31,7 +31,7 @@ export class Result {
       this.FbS.getProductId(this.data.text).subscribe(res => {
         this.product = this.FbS.getProductId(this.data.text);
         if (res.length !== 0) {
-          console.log('ada data')
+          console.log('there is data')
           this.noData = false;
           let d = {
             text: res[0].text,
@@ -40,7 +40,7 @@ export class Result {
           }
           this.FbS.addHistory(d)
         }else {
-          console.log("tidak ada data")
+          console.log("No data")
           this.noData = true;
         }
       });
