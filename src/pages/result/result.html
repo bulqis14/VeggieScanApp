@@ -26,7 +26,7 @@
         </ion-item>
       </div>
 
-      <div *ngIf="item.color !== 'red'" class="isVegan">
+      <div *ngIf="item.color === 'green'" class="isVegan">
         <h1>This Product is : {{item.status}}</h1>
         <ion-item>
           Product Name: {{item.productname}}
